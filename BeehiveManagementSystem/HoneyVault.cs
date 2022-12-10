@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 
+// I write this class first due to it is independent with other classes
+
+
 namespace BeehiveManagementSystem
 {
     internal static class HoneyVault
@@ -16,7 +19,7 @@ namespace BeehiveManagementSystem
         private static float nectar = 100f;
         
 
-
+        // Nectar collector will call "CollectNectar" 
         public static void CollectNectar(float amount)
         {
             if (amount > 0f) nectar += amount;
@@ -30,7 +33,7 @@ namespace BeehiveManagementSystem
        
         }
 
-        public static bool ConsumeHoney(float amount, float honey)
+        public static bool ConsumeHoney(float amount)
         {
             if( honey >= amount)
             {
